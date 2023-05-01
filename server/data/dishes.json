@@ -1,0 +1,129 @@
+{"dishes":[
+{
+"name": "Spaghetti Bolognese",
+"price": 15,
+"description": "Classic Italian pasta with a hearty meat sauce",
+"image": "https://www.inspiredtaste.net/wp-content/uploads/2018/08/Spaghetti-with-Meat-Sauce-Recipe-1-1200.jpg",
+"isGlutenFree": false,
+"isVegetarian": false,
+"categoryId": "6442c71e1419bb4505e9eec0"
+},
+{
+"name": "Tiramisu",
+"price": 8,
+"description": "Traditional Italian dessert made with ladyfingers, mascarpone cheese, and espresso",
+"image": "https://www.acouplecooks.com/wp-content/uploads/2020/12/Tiramisu-020.jpg",
+"isGlutenFree": false,
+"isVegetarian": true,
+"categoryId": "6442c79d1419bb4505e9eec1"
+},
+{
+"name": "Classic Cheeseburger",
+"price": 12,
+"description": "Juicy beef patty with melted cheese, lettuce, tomato, and onion on a sesame seed bun",
+"image": "https://www.onceuponachef.com/images/2018/07/Big-Beef-Cheeseburger-1200x900.jpg",
+"isGlutenFree": false,
+"isVegetarian": false,
+"categoryId": "6442c7de1419bb4505e9eec2"
+},
+{
+"name": "Garlic Knots",
+"price": 5,
+"description": "Freshly baked dough knots brushed with garlic butter and sprinkled with parmesan cheese",
+"image": "https://www.delonghi.com/Global/recipes/multifry/pizza_fresca_con_lievito_madre_e_pesto.jpg",
+"isGlutenFree": false,
+"isVegetarian": true,
+"categoryId": "6442c8891419bb4505e9eec3"
+},
+{
+"name": "Mojito",
+"price": 10,
+"description": "Classic Cuban cocktail made with white rum, lime juice, sugar, soda water, and mint leaves",
+"image": "https://www.acouplecooks.com/wp-content/uploads/2020/07/Mojito-003.jpg",
+"isGlutenFree": true,
+"isVegetarian": true,
+"categoryId": "6442c9681419bb4505e9eec4"
+},
+  {
+    "name": "Fettuccine Alfredo",
+    "price": 14,
+    "description": "Creamy pasta with parmesan cheese, butter, and cream",
+    "image": "https://www.simplyrecipes.com/thmb/PB8-QZ9J6eO7cJ27UWwHK8AhiyI=/1200x800/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Fettuccine-Alfredo-LEAD-1-a-01-06e2b478a3084cd0b7ab4f712ec3e4f4.jpg",
+    "isGlutenFree": false,
+    "isVegetarian": true,
+    "categoryId": "6442c71e1419bb4505e9eec0"
+  },
+  {
+    "name": "Penne Arrabiata",
+    "price": 12,
+    "description": "Spicy tomato sauce pasta with garlic and chili pepper",
+    "image": "https://www.italianfoodforever.com/wp-content/uploads/2015/10/penne-arrabiata-3.jpg",
+    "isGlutenFree": false,
+    "isVegetarian": true,
+    "categoryId": "6442c71e1419bb4505e9eec0"
+  },
+  {
+    "name": "Ravioli di Magro",
+    "price": 16,
+    "description": "Cheese and spinach-filled ravioli with tomato sauce",
+    "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-191104-ravioli-spinach-0264-portrait-pf-1573599724.jpg",
+    "isGlutenFree": false,
+    "isVegetarian": true,
+    "categoryId": "6442c71e1419bb4505e9eec0"
+  },
+  {
+    "name": "Cannoli",
+    "price": 7,
+    "description": "Italian pastry filled with sweetened ricotta cheese and chocolate chips",
+    "image": "https://www.spendwithpennies.com/wp-content/uploads/2021/02/Cannoli-SpendWithPennies-3.jpg",
+    "isGlutenFree": false,
+    "isVegetarian": true,
+    "categoryId": "6442c79d1419bb4505e9eec1"
+  },
+  {
+    "name": "Panna Cotta",
+    "price": 9,
+    "description": "Creamy Italian dessert made with sweetened cream and gelatin",
+    "image": "https://www.inspiredtaste.net/wp-content/uploads/2019/12/Panna-Cotta-Recipe-2-1200.jpg",
+    "isGlutenFree": true,
+    "isVegetarian": true,
+    "categoryId": "6442c79d1419bb4505e9eec1"
+  },
+  {
+    "name": "Affogato",
+    "price": 8,
+    "description": "Vanilla gelato with a shot of espresso poured over it",
+    "image": "https://www.acouplecooks.com/wp-content/uploads/2021/06/Affogato-007.jpg",
+    "isGlutenFree": true,
+    "isVegetarian": true,
+    "categoryId": "6442c79d1419bb4505e9eec1"
+  },
+  {
+    "name": "Bacon Cheeseburger",
+    "price": 14,
+    "description": "Juicy beef patty with crispy bacon, melted cheddar cheese, lettuce, tomato, and onion on a sesame seed bun",
+    "image": "https://www.onceuponachef.com/images/2018/07/Bacon-Cheeseburger-1200x900.jpg",
+    "isGlutenFree": false,
+    "isVegetarian": false,
+    "categoryId": "6442c7de1419bb4505e9eec2"
+  },
+  {
+    "name": "Veggie Burger",
+    "price": 12,
+    "description": "Meatless patty made with quinoa, black beans, and mushrooms, topped with avocado, lettuce, tomato, and onion on a whole wheat bun",
+    "image": "https://www.acouplecooks.com/wp-content/uploads/2021/03/Veggie-Burger-020.jpg",
+    "isGlutenFree": true,
+    "isVegetarian": true,
+    "categoryId": "6442c7de1419bb4505e9eec2"
+  },
+  {
+    "name": "BBQ Burger",
+    "price": 15,
+    "description": "Juicy beef patty with smoky BBQ sauce, crispy onion rings, cheddar cheese, lettuce, and tomato on a sesame seed bun",
+    "image": "https://www.inspiredtaste.net/wp-content/uploads/2018/06/Juicy-Skillet-Cheeseburgers-Recipe-3-1200.jpg",
+    "isGlutenFree": false,
+    "isVegetarian": false,
+    "categoryId": "6442c7de1419bb4505e9eec2"
+  }
+]
+}
