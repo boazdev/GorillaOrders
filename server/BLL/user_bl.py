@@ -14,9 +14,10 @@ class UserBL:
         return user
 
     def add_user(self,obj):
-        resp = self.__user_db_dal.add_user(obj)
         if self.__user_db_dal.get_user_by_username(obj["username"])!= None:
             return 403
+        obj["isStaff"]=False
+        resp = self.__user_db_dal.add_user(obj)
         return resp
 
     def update_user(self,id,obj):
@@ -30,6 +31,6 @@ class UserBL:
     def init_users_db(self):
         users= self.__user_ws_dal.get_all_users()
         users_lst = list(map(lambda item: {"username":item["username"],"password":item["username"][0:4]+"123",
-                                           "fullname":item["name"], "email": item["email"],"is_staff":False},users))
+                                           "fullname":item["name"], "email": item["email"]},users))
         for user in users_lst:
             self.__user_db_dal.add_user(user)

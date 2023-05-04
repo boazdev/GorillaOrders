@@ -16,7 +16,7 @@ class CartBL:
         resp = self.__cart_db_dal.add_cart(obj)
         return resp
 
-    def update_cart(self,id,obj):
+    def update_cart(self,id,obj): #todo: add authrozation, only admins are allowed to set cart isDelivered status
         resp = self.__cart_db_dal.update_cart(id,obj)
         return resp
 

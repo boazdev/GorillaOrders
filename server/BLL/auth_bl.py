@@ -18,7 +18,7 @@ class AuthBL:
         user = self.__user_db_dal.get_user_by_username(username)
         if user==None:
             return "username_error"        
-        elif user["password"] != password:
+        elif user["password"] != password: #TODO:use compare_digest instead
             return "password_error"
         
         id= str(user["_id"])

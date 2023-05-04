@@ -13,6 +13,8 @@ from routers.cart_router import carts
 from routers.auth_router import auth, verify_token
 from BLL.user_bl import UserBL
 from BLL.dish_bl import DishBL
+from utils.mongo_utils import *
+
 app = Flask(__name__) #todo:add TDD, add json validation schema, add 3rd party auth0 authorization, add passwords encrpytion salts
 app.url_map.strict_slashes = False
 app.json_encoder = JSONEncoder
@@ -24,6 +26,7 @@ app.register_blueprint(categories, url_prefix="/categories")
 app.register_blueprint(carts, url_prefix="/carts")
 
 app.register_blueprint(auth, url_prefix="/login")
+check_mongodb_server()
 userBL=UserBL()
 if(len(userBL.get_all_users())==0):
     userBL.init_users_db()
