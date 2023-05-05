@@ -9,7 +9,7 @@ const CarouselContainer = styled('div')({
   scrollbarWidth: 'none',
   backgroundColor: '#F8EAD1',
   
-  '-ms-overflow-style': 'none',
+  /* '-ms-overflow-style': 'none', */
   '&::-webkit-scrollbar': {
     display: 'none',
   },
@@ -60,13 +60,14 @@ const CatNav = (props) => {
   const [selectedCategory, setSelectedCategory] = React.useState(foodCategories[0]._id);
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    props.catFunc(category)
   };
 const getSelectedCatName = (id) =>
 {
   return foodCategories.filter(item=>item._id===id)[0].name
 }
   return (
-    <div style={{ width: "650px" }}>
+    <div style={{ width: "100%", }}>
   <Box sx={{ backgroundColor: "#F8EAD1" }}>
     <Grid
       item
@@ -75,7 +76,7 @@ const getSelectedCatName = (id) =>
       direction={"row"}
       alignItems="center"
       justifyContent="space-between"
-      sx={{ maxWidth: "100%", margin: "0 auto" }}
+      sx={{ maxWidth: "100%", margin: "0 auto",paddingBottom:"1vh" }}
     >
       <Grid item xs={1}>
       <Button
@@ -114,7 +115,7 @@ const getSelectedCatName = (id) =>
 </Button>
       </Grid>
     </Grid>
-    <br/>
+    {/* <br/> */}
   </Box>
   <Divider sx={{ borderBottom: '2px solid grey' }} />
   <Box
