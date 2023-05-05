@@ -33,8 +33,7 @@ const LinkButton = styled('button')(({ theme, selected }) => ({
     }  
   }));
   
-
-const CatNav = () => {
+const CatNav = (props) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   
   const handlePrev = () => {
@@ -47,7 +46,7 @@ const CatNav = () => {
   
 
 
-  const foodCategories = [
+  const foodCategories = props.catList/* [
     'Burgers',
     'Pizza',
     'Tacos',
@@ -56,13 +55,16 @@ const CatNav = () => {
     'Salads',
     'Desserts',
     'Drinks',
-  ];
+  ]; */
 
-  const [selectedCategory, setSelectedCategory] = React.useState(foodCategories[0]);
+  const [selectedCategory, setSelectedCategory] = React.useState(foodCategories[0]._id);
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
-
+const getSelectedCatName = (id) =>
+{
+  return foodCategories.filter(item=>item._id===id)[0].name
+}
   return (
     <div style={{ width: "650px" }}>
   <Box sx={{ backgroundColor: "#F8EAD1" }}>
@@ -92,10 +94,10 @@ const CatNav = () => {
           {foodCategories
             .slice(activeIndex, activeIndex + 5)
             .map((category) => (
-              <LinkButton key={category}
-              selected={selectedCategory === category} 
-              onClick={() => handleCategoryClick(category)}
-              >{category}</LinkButton>
+              <LinkButton key={category._id}
+              selected={selectedCategory === category._id} 
+              onClick={() => handleCategoryClick(category._id)}
+              >{category.name}</LinkButton>
             ))}
         </CarouselContainer>
       </Grid>
@@ -124,7 +126,7 @@ const CatNav = () => {
       backgroundColor: "#F8EAD1",
     }}
   >
-    <Typography>{"- " +selectedCategory+" -"}</Typography>
+    <Typography>{"- " +getSelectedCatName(selectedCategory)+" -"}</Typography>
   </Box>
 </div>
 

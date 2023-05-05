@@ -1,15 +1,44 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import getUserToken from "./authService";
-const wsUrl = "http://localhost:8080/" //TODO: change that it will retrieve it from environment file
-const axiosInstance = axios.create({baseURL:wsUrl})
+const wsUrl="http://localhost:8000/" //TODO:retrieve backend webservice url from process.env file
 
-axiosInstance.interceptors.request.use((req=> {
+import { getUserToken } from './authService';
+
+//const axiosInstance = axios.create({baseURL:wsUrl})
+
+/* axiosInstance.interceptors.request.use((req=> {
     req.headers = {"x-access-token": getUserToken(),
     "Content-Type":"application/json"}
-}))
+    return req
+})) */
+/* axios.interceptors.request.use((req=> {
+    req.headers = {"x-access-token": getUserToken(),
+    "Content-Type":"application/json"}
+    return req
+}))  */
 
-export const getBackendWS = async (path,token) => {
+
+axios.interceptors.request.use((req=> {
+    req.headers = {...req.headers,"x-access-token": getUserToken(),
+    "Content-Type":"application/json"}
+    return req
+})) 
+
+export const getBackendWS = async (path) => {
+    // const navigate= useNavigate()
+    let token = getUserToken()
+    console.log("token:", token)
+    try {
+        let resp = await axios.get(wsUrl+path)
+        return resp 
+    } catch (error) {
+        console.log("get request error");
+        console.log(error);
+        return error.response;
+      }
+    
+ }
+
+export const getBackendWSOld = async (path,token) => {
    // const navigate= useNavigate()
     try {
             let resp = await axios.get(wsUrl+path,{headers: {
